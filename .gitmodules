@@ -1,9 +1,6 @@
 [submodule "adb_root"]
 	path = adb_root
 	url = https://github.com/evdenis/adb_root.git
-[submodule "magisk-module"]
-	path = magisk-module
-	url = https://github.com/Hakimi0804/magisk-module.git
 [submodule "SELinux-permissiver-magisk-module"]
 	path = SELinux-permissiver-magisk-module
 	url = https://github.com/Hakimi0804/SELinux-permissiver-magisk-module.git
