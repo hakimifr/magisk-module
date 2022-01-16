@@ -1,0 +1,6 @@
+# Hide collections of retarded modules, can also be used to store temporary stuff
+retarded_modules_collections/
+
+# Ignore log files
+update.log
+update.log.lz4
