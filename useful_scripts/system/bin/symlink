@@ -1,0 +1,9 @@
+#!/system/bin/sh
+
+if [ "$#" -ne 2 ]; then
+  echo "Not enough arguments"
+  echo "Usage: $0 <filename> <symlink destination>"
+  exit 1
+fi
+
+ln -s "$1" "$2"

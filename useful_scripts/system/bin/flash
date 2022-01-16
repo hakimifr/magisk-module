@@ -1,0 +1,42 @@
+#!/system/bin/sh
+if [ "$#" -ne 2 ]; then
+	echo "Missing filename or partition"
+	echo "Usage: $0 <partition> <filename>"
+  exit 1
+fi
+
+# Check if the partition exists
+# Check /dev/block/by-name/$1
+if [ ! -e "/dev/block/by-name/$1" ]; then
+  echo "Partition $1 does not exist"
+  exit 1
+fi
+
+# check if file exist
+if [ ! -f "$2" ]; then
+  echo "File $2 does not exist"
+  exit 1
+fi
+
+# check if partition is one of the dangerous partitions to flash
+dangerous_partition="
+nvram
+nvdata
+nvcfg
+persist
+flashinfo
+protect1
+protect2
+"
+
+# prevent flashing dangerous partitions
+for i in $dangerous_partition; do
+  if [ "$1" = "$i" ]; then
+    echo "Partition $1 is dangerous to flash"
+    exit 1
+  fi
+done
+
+# flash time!
+echo "Flashing $2 to /dev/block/by-name/$1"
+dd if="$2" of="/dev/block/by-name/$1"

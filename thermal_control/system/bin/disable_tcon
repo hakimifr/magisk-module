@@ -1,0 +1,6 @@
+# shellcheck shell=sh
+
+setprop thermal_control "disable"
+echo "custom thermal profile disabled."
+echo "reboot to re-enable"
+
