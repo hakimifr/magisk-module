@@ -1,0 +1,7 @@
+id=blur-enable
+name=Blur support
+version=v1
+versionCode=1
+author=Hakimi
+description=Enables blur by setting 'ro.surface_flinger.supports_background_blur' to 1
+Caution: may cause graphical glitch. If so, please uninstall this module.

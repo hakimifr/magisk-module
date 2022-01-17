@@ -1,0 +1,6 @@
+id=adb_root-A11
+name=ADB Root enabler for Android 11+
+version=1.0-alpha
+versionCode=1
+author=Hakimi0804
+description=adbd binary from https://github.com/evdenis/adb_root
