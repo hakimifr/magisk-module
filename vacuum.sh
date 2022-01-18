@@ -26,5 +26,5 @@ mv update.log.trimmed update.log
 # compress it back if enabled
 if [[ "$enable_compression" = true ]]; then
   print_info "Compressing log file"
-  lz4 --rm -qd update.log
+  lz4 --rm -q update.log
 fi

@@ -93,7 +93,7 @@ for folder in $folders; do
   print_info "Copying $folder.zip to ~/shared/modules" # (this folder will be synced to my phone by syncthing/KDE Connect)
   (
     mkdir -p ~/shared/modules
-    cp "$folder/$folder.zip" ~/shared/modules
+    cp "zipped/$folder.zip" ~/shared/modules
   ) &>> update.log
 
 done
