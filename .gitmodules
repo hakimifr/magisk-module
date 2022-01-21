@@ -7,3 +7,12 @@
 [submodule "ViPER4Android-FX"]
 	path = ViPER4Android-FX
 	url = https://github.com/Magisk-Modules-Repo/ViPER4Android-FX.git
+[submodule "aml"]
+	path = aml
+	url = https://github.com/Magisk-Modules-Repo/aml.git
+[submodule "acp"]
+	path = acp
+	url = https://github.com/Magisk-Modules-Repo/acp.git
+[submodule "G-VisualMod"]
+	path = G-VisualMod
+	url = https://github.com/Magisk-Modules-Repo/G-VisualMod.git
