@@ -2,7 +2,7 @@
 
 available_module=(
 	"G-VisualMod.zip"
-	"SELinux-permissiver-magisk-module.zip"
+	# "SELinux-permissiver-magisk-module.zip"
 	"ViPER4Android-FX.zip"
 	"acp.zip"
 	"adb_root-a11+.zip"
@@ -57,7 +57,7 @@ exclude_combo6=(
 
 #### Variables #######################
 gh_zipurl="https://raw.githubusercontent.com/Hakimi0804/magisk-module/main/zipped"
-preferred_excl_combo=1
+preferred_excl_combo=2
 # selected_excl_combo=1
 ######################################
 
