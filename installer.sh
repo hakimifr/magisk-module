@@ -14,10 +14,10 @@ available_module=(
 )
 
 # Exclude nothing
-exclude_combo0=()
+exclude_combo1=()
 
 # Exclude audio mods, adb, thermal
-exclude_combo1=(
+exclude_combo2=(
 	"acp.zip"
 	"aml.zip"
 	"adb_root-a11+.zip"
@@ -28,20 +28,20 @@ exclude_combo1=(
 )
 
 # Exclude audio mods
-exclude_combo2=(
+exclude_combo3=(
 	"acp.zip"
 	"aml.zip"
 	"ViPER4Android-FX.zip"
 )
 
 # Exclude adb
-exclude_combo3=(
+exclude_combo4=(
 	"adb_root-a11+.zip"
 	"adb_root.zip"
 )
 
 # Exclude adb, audio mods
-exclude_combo4=(
+exclude_combo5=(
 	"adb_root-a11+.zip"
 	"adb_root.zip"
 	"acp.zip"
@@ -51,7 +51,7 @@ exclude_combo4=(
 )
 
 # Exclude thermal mod
-exclude_combo5=(
+exclude_combo6=(
 	"thermal_control.zip"
 )
 
@@ -74,22 +74,22 @@ read -p "Select an option(default: 2): " selected_excl_combo
 pick_excl() {
 	case $selected_excl_combo in
 		1)
-			exclude_combo=${exclude_combo0[*]}
-			;;
-		2)
 			exclude_combo=${exclude_combo1[*]}
 			;;
-		3)
+		2)
 			exclude_combo=${exclude_combo2[*]}
 			;;
-		4)
+		3)
 			exclude_combo=${exclude_combo3[*]}
 			;;
-		5)
+		4)
 			exclude_combo=${exclude_combo4[*]}
 			;;
-		6)
+		5)
 			exclude_combo=${exclude_combo5[*]}
+			;;
+		6)
+			exclude_combo=${exclude_combo6[*]}
 			;;
 		*)
 			selected_excl_combo=$preferred_excl_combo
@@ -104,7 +104,7 @@ echo "Selected option: $selected_excl_combo"
 # Download modules
 echo "Downloading modules..."
 mkdir mdls
-for module in ${available_module[*]}; do
+for module in "${available_module[@]}"; do
 	if [[ ! " ${exclude_combo[*]} " =~ " ${module} " ]]; then
 		echo "  Downloading $module..."
 		wget -q -O "mdls/$module" "$gh_zipurl/$module"
