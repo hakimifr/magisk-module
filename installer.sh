@@ -1,5 +1,22 @@
 #!/data/data/com.termux/files/usr/bin/bash
 
+echo -ne "Updating the script...\r"
+script_link="https://raw.githubusercontent.com/Hakimi0804/magisk-module/main/installer.sh"
+curl -fsSo installer.sh.updated $script_link
+echo -ne "                          \r\n" # clear line
+
+# Check if the script was updated
+chmod +x installer.sh.updated installer.sh
+old_script="$(md5sum installer.sh)"
+new_script="$(md5sum installer.sh.updated)"
+if [ "$old_script" != "$new_script" ]; then
+	mv installer.sh.updated installer.sh
+	echo "The script was updated, please run it again."
+	exit 0
+else
+	rm installer.sh.updated
+fi
+
 available_module=(
 	"G-VisualMod.zip"
 	# "SELinux-permissiver-magisk-module.zip"
