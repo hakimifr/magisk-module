@@ -3,7 +3,7 @@
 echo -ne "Updating the script...\r"
 script_link="https://raw.githubusercontent.com/Hakimi0804/magisk-module/main/installer.sh"
 curl -fsSo installer.sh.updated $script_link
-echo -ne "                          \r\n" # clear line
+echo -ne "                          \r" # clear line
 
 # Check if the script was updated
 chmod +x installer.sh.updated installer.sh
@@ -11,7 +11,7 @@ old_script="$(md5sum installer.sh)"
 new_script="$(md5sum installer.sh.updated)"
 if [ "$old_script" != "$new_script" ]; then
 	mv installer.sh.updated installer.sh
-	echo "The script was updated, please run it again."
+	echo -ne "The script was updated, please run it again.\n"
 	exit 0
 else
 	rm installer.sh.updated
