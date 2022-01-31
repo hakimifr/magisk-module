@@ -16,3 +16,6 @@
 [submodule "G-VisualMod"]
 	path = G-VisualMod
 	url = https://github.com/Magisk-Modules-Repo/G-VisualMod.git
+[submodule "ih8sn-magisk"]
+	path = ih8sn-magisk
+	url = https://github.com/Hakimi0804/ih8sn-magisk.git
