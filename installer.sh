@@ -16,6 +16,7 @@ available_module=(
 	"blur_support.zip"
 	"thermal_control.zip"
 	"useful_scripts.zip"
+	"ih8sn-magisk.zip"
 )
 
 # Exclude nothing
